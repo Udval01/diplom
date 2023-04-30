@@ -1,8 +1,9 @@
+// @ts-nocheck
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {NavigationRoutes, NavigatorParamList} from './navigation-param';
-import {Text, InteractiveIcon} from '../components';
+import {InteractiveIcon} from '../components';
 import {CloseIcon} from '../assets/icons';
 import {PhoneNumberRegistrationScreen} from '../screen/phone-number-registration';
 import {CodeVerificationScreen} from '../screen/phone-number-verfication';

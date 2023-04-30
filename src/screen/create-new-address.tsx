@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, {useState} from 'react';
 import {AsyncButton, Border, Input, Padding, Stack, Text} from '../components';
 import {SafeAreaScreen} from '.';

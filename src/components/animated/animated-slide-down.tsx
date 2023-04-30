@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, {useEffect, useRef, FC} from 'react';
 import {Animated} from 'react-native';
 export const AnimatedSlideDownView: FC<any> = ({

@@ -4,6 +4,5 @@ export * from './button';
 export * from './circle';
 export * from './image';
 export * from './input';
-// export * from './shadow';
 export * from './text';
 export * from './pill';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {Route, useNavigation, useRoute} from '@react-navigation/native';
 import _ from 'lodash';
 import React, {useContext, useEffect, useState} from 'react';

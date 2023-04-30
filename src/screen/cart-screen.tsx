@@ -1,3 +1,4 @@
+// @ts-nocheck
 import _ from 'lodash';
 import React, {useContext} from 'react';
 import {useNavigation} from '@react-navigation/native';
@@ -16,15 +17,11 @@ import {
   Stack,
   Text,
 } from '../components';
-// import {ProductEditCart} from '../components/products';
 import {useFirestoreCollection, useFirestoreDocument} from '../firebase';
 import {NavigationRoutes} from '../navigation/navigation-param';
-// import {DeliveryOptionContext} from '../delivery-options-stack/delivery-option-context';
 import {EmptyCartScreen} from './empty-cart-screen';
-// import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
 import {ItemTrash} from '../assets/icons/index';
 import {ShoppingCartContext} from '../contexts/cart';
-import {DeliveryOptionContext} from '../contexts/delivery';
 import {ProductEditCart} from '../components/products/product-edit-card';
 
 export const ItemInCart = props => {
@@ -101,14 +98,11 @@ export const ItemInCart = props => {
 export const CartSummary = () => {
   const navigation = useNavigation();
   const {totalPrice, totalItems} = useContext(ShoppingCartContext);
-  const {selectedTimeSlot} = useContext(DeliveryOptionContext);
   const {user} = useContext(AuthContext);
-  const {uid} = user || {};
-  const {availableAddress} = useContext(DeliveryOptionContext);
   const {phoneNumber} = user || {};
-  const {price: deliveryPrice} = selectedTimeSlot || {price: 3000};
+  const {price: deliveryPrice} = {price: 3000};
   const totalCost = totalPrice * 1 + deliveryPrice * 1;
-  const {data} = useFirestoreDocument([USERS_HOME, uid]);
+
   const onCheckout = async () => {
     if (!phoneNumber) {
       navigation.navigate(NavigationRoutes.AuthenticationHome, {

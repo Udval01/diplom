@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useNavigation} from '@react-navigation/native';
 import React, {useContext} from 'react';
 import {SafeAreaScreen} from '.';

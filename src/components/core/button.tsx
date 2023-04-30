@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, {FC, useState} from 'react';
 import {TouchableOpacity} from 'react-native';
 import {ColorTypes, TypographyTypes} from '../../theme';

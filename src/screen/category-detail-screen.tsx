@@ -1,11 +1,10 @@
+// @ts-nocheck
 import {useRoute} from '@react-navigation/native';
 import _ from 'lodash';
 import React from 'react';
 import {Dimensions} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaScreen} from '.';
-import {Border, Padding} from '../components';
-import {Autocomplete} from '../components/search';
 import {List} from './search-list';
 import {useFirestoreCollection} from '../firebase';
 

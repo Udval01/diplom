@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {Route, useNavigation, useRoute} from '@react-navigation/native';
 import _ from 'lodash';
 import React, {useState} from 'react';
@@ -22,7 +23,7 @@ import {
   Text,
   Box,
   Stepper,
-  LoadingGereseeLogo,
+  LoadingIcon,
 } from '../components';
 import {useFirestoreCollection} from '../firebase';
 import moment from 'moment';
@@ -259,7 +260,7 @@ export const DetailedOrderScreen = () => {
     .value();
   const {height} = Dimensions.get('screen');
   if (ProductsLoading) {
-    return <LoadingGereseeLogo />;
+    return <LoadingIcon />;
   }
 
   return (

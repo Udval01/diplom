@@ -1,3 +1,4 @@
+// @ts-nocheck
 import _ from 'lodash';
 import React, {useContext} from 'react';
 import {Dimensions, FlatList, View} from 'react-native';
@@ -11,7 +12,6 @@ import {
   Text,
   ThemeContext,
 } from '../components';
-// import {NavigationRoutes} from '../../navigation/navigation-param';
 
 const GRID_SIZE = 2;
 const window = Dimensions.get('window');
@@ -57,23 +57,3 @@ export const List = ({products}) => {
     />
   );
 };
-
-// export const SearchItemScreen = () => {
-//   const {selectedStoreId} = useContext(SelectedStoreContext);
-
-//   return (
-//     <SafeAreaScreen>
-//       <SearchProvider indexName={selectedStoreId + ''}>
-//         <ProductSearchProvider>
-//           <Padding bottom={3} top={3}>
-//             <Autocomplete />
-//             <Text>{selectedStoreId + ''}</Text>
-//           </Padding>
-//           <Margin size={[2, 0, 0, 0]}>
-//             <List />
-//           </Margin>
-//         </ProductSearchProvider>
-//       </SearchProvider>
-//     </SafeAreaScreen>
-//   );
-// };

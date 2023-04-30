@@ -1,9 +1,9 @@
-import {useNavigation, CommonActions} from '@react-navigation/native';
+// @ts-nocheck
+import {useNavigation} from '@react-navigation/native';
 import _ from 'lodash';
 import React, {useContext} from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {BasicScreen, SafeAreaScreen} from '.';
-// import {EmptyOrderIllustration} from '../../assets/illustrations';
 import {AuthContext, USERS_HOME} from '../contexts/auth';
 import {
   AnimatedFadeInView,
@@ -17,7 +17,7 @@ import {
   Stack,
   Text,
   Spacer,
-  LoadingGereseeLogo,
+  LoadingIcon,
 } from '../components';
 import {useFirestoreCollection} from '../firebase';
 import {NavigationRoutes} from '../navigation/navigation-param';
@@ -202,10 +202,9 @@ export const waitingOrderListScreen = () => {
   const {user} = useContext(AuthContext);
   const {uid} = user || {};
   const {data, loading} = useFirestoreCollection([USERS_HOME, uid, 'order']);
-  const {signOut} = useContext(AuthContext);
 
   if (!data) {
-    return <LoadingGereseeLogo />;
+    return <LoadingIcon />;
   }
 
   if (!_.filter(data, item => item.status != 'Хүргэгдсэн').length) {

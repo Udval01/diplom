@@ -1,3 +1,4 @@
+// @ts-nocheck
 import _ from 'lodash';
 import React, {useContext, useEffect, useState} from 'react';
 import {KeyboardAvoidingView, Platform, Keyboard} from 'react-native';

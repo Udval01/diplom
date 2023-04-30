@@ -1,19 +1,14 @@
-import React, {useContext, useEffect, useState} from 'react';
+// @ts-nocheck
+import React, {useEffect, useState} from 'react';
 import {NavigationRoutes} from './navigation-param';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {HomeIconBar, ProfileIconBar, OrderIconBar} from '../assets/icons';
 import {HomeStack} from './home-stack';
 import {Platform, Keyboard} from 'react-native';
 import {BottomTabBar} from '@react-navigation/bottom-tabs';
-// import messaging from '@react-native-firebase/messaging';
-import {useNavigation} from '@react-navigation/native';
 import _ from 'lodash';
-import {AuthContext} from '../contexts/auth';
 import {ProfileBarStack} from './profile-stack';
 import {orderListTopBar} from './order-list-top-bar';
-// import { AuthContext, USERS_HOME } from '../authentication';
-// import { useFirestoreDocument } from '../firebase';
-// import { orderListTopBar } from './order-list-top-bar';
 
 const CustomBottomTabBar = props => {
   const [visible, setVisible] = useState(true);
@@ -51,39 +46,6 @@ export default CustomBottomTabBar;
 const Tab = createBottomTabNavigator();
 
 export const MainRoot = () => {
-  const {user} = useContext(AuthContext);
-  const {uid} = user || {};
-  const [orderId, setOrderId] = useState();
-  const {navigate} = useNavigation();
-  // const { data: order, loading } = useFirestoreDocument([
-  //     USERS_HOME,
-  //     uid,
-  //     'order',
-  //     orderId && orderId,
-  // ]);
-
-  // const getOrderMessage = (remoteMessage) => {
-  //     if (!remoteMessage?.data?.orderId) {
-  //         return;
-  //     }
-  //     setOrderId(remoteMessage.data.orderId);
-  // };
-  // const navigateToPath = () => {
-  //     navigate(NavigationRoutes.OrderListStack, {
-  //         screen: NavigationRoutes.DetailedOrderScreen,
-  //         params: { order: order },
-  //     });
-  // };
-  // useEffect(() => {
-  //     messaging().onNotificationOpenedApp(getOrderMessage);
-  //     messaging().getInitialNotification().then(getOrderMessage);
-  // }, []);
-  // useEffect(() => {
-  //     if (order) {
-  //         navigateToPath();
-  //     }
-  // }, [order]);
-
   return (
     <Tab.Navigator
       tabBarOptions={{

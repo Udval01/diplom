@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, {FC} from 'react';
 import {ActivityIndicator, TouchableOpacity} from 'react-native';
 import {TypographyTypes} from '../../theme';

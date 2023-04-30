@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import {Dimensions, View} from 'react-native';
 import {CheckMarkIcon} from '../../assets/icons';

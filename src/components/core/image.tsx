@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {View} from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import FastImage from 'react-native-fast-image';
-import {GereseeLogo} from '../../assets/icons';
+import {UdvalLogo} from '../../assets/icons';
 import {AnimatedFadeInView} from '../animated';
 import {Center, Overlay} from '../layout';
 import '../types';
@@ -25,7 +25,7 @@ export const RemoteImage = ({
           useNativeDriver={true}>
           <AnimatedFadeInView visible={!ready} height="100%">
             <Center flex={1}>
-              <GereseeLogo height={75} width={75} />
+              <UdvalLogo height={75} width={75} />
             </Center>
           </AnimatedFadeInView>
         </Animatable.View>

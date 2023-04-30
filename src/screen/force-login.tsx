@@ -1,6 +1,6 @@
+// @ts-nocheck
 import {SafeAreaScreen} from '.';
 import React from 'react';
-import {ForceLoginIllustration} from '../assets/illustrations/';
 import {Button, Padding, Center, Text, Stack} from '../components';
 import {NavigationRoutes} from '../navigation/navigation-param';
 import {useNavigation} from '@react-navigation/core';

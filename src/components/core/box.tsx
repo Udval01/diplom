@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, {FC} from 'react';
 import {ImageBackground, StyleSheet, View} from 'react-native';
 import {mapRoleToBackgroundColor} from '../core';

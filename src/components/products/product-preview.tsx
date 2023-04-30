@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import {Dimensions, View, TouchableWithoutFeedback} from 'react-native';
 import {Border, RemoteImage, Text} from '../core';

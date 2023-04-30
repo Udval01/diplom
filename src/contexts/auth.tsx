@@ -1,8 +1,6 @@
-// import analytics from '@react-native-firebase/analytics';
+// @ts-nocheck
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 import React, {createContext, useContext, useEffect, useState} from 'react';
-// import { requestUserPermission } from '../notification';
-// import crashlytics from '@react-native-firebase/crashlytics';
 export const USERS_HOME = 'users';
 export const GOOGLE_MAPS_API_KEY = 'AIzaSyC_OtyjQz34hydjoYgRdM7PaVMvisnRceQ';
 

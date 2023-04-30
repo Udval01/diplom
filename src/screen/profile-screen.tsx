@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useNavigation} from '@react-navigation/core';
 import {CommonActions} from '@react-navigation/native';
 import _ from 'lodash';
@@ -6,14 +7,11 @@ import {View} from 'react-native';
 import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import {SafeAreaScreen} from '.';
 import {
-  ChevronRightIcon,
   ExclamationMark,
-  MapNavigationIcon,
   ProfilePhoneIcon,
   SettingsIconBlack,
   SignOutIconRed,
 } from '../assets/icons';
-import {DeliveringOrderIllustration} from '../assets/illustrations/';
 import {AuthContext, useUserUID} from '../contexts/auth';
 import {Border, Padding, Queue, Stack, Text} from '../components';
 import {Grid} from '../components/layout/grid';

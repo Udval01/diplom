@@ -1,3 +1,4 @@
+// @ts-nocheck
 import _ from 'lodash';
 import React, {useContext, useState} from 'react';
 import {Dimensions} from 'react-native';

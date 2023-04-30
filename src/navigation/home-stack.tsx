@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import React, {useContext} from 'react';

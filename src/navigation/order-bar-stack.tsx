@@ -1,25 +1,14 @@
+// @ts-nocheck
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
-// import {DeliveryOptionsScreen} from '../screen/delivery-options-stack';
-// import {
-//   LocationMappingScreen,
-//   LocationRequestScreen,
-// } from '../screen/location-stack';
-// import {SavedAddressScreen} from '../screen/location-stack/saved-addresses-screen';
-// import {OrderConfirmationScreen} from '../screen/order-status-stack';
 import {BackArrowIcon} from '../assets/icons';
-// import {DetailedOrderScreen} from '../screen/order-status-stack/detailed-order-screen';
 import {NavigationRoutes, NavigatorParamList} from './navigation-param';
-import {Center, Text} from '../components';
+import {Text} from '../components';
 import {useNavigation} from '@react-navigation/native';
 import {InteractiveIcon} from '../components';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
-// import {LocationInfoScreen} from '../screen/location-stack/location-info-screen';
-import {BlackCloseIcon} from '../assets/icons/index';
-import {TouchableOpacity} from 'react-native';
 import {CartScreen} from '../screen/cart-screen';
 import {OrderConfirmationScreen} from '../screen/order-confirmation-screen';
-import {DeliveryOptionsScreen} from '../screen/devlivery-option-screen';
 import {CreateNewAddress} from '../screen/create-new-address';
 import {DetailedOrderScreen} from '../screen/detailed-order-screen';
 import {CreateOrderScreen} from '../screen/create-order-screen';

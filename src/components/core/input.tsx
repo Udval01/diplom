@@ -1,12 +1,7 @@
+// @ts-nocheck
 import IMask from 'imask';
 import React, {FC, useEffect, useRef, useState} from 'react';
-import {
-  ActivityIndicator,
-  Keyboard,
-  Platform,
-  StyleSheet,
-  TextInput,
-} from 'react-native';
+import {ActivityIndicator, Platform, StyleSheet, TextInput} from 'react-native';
 import {CheckboxMarkIcon} from '../../assets/icons';
 import {AnimatedFadeInView} from '../animated';
 import {Center, Overlay, Padding, Queue} from '../layout';

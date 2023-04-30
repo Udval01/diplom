@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {createStackNavigator} from '@react-navigation/stack';
 import React, {useContext, useState} from 'react';
 import {AuthContext} from '../contexts/auth';

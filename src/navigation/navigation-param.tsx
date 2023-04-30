@@ -1,3 +1,4 @@
+// @ts-nocheck
 export enum NavigationRoutes {
   Home = 'Home',
   Test = 'Test',

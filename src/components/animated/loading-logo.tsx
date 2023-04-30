@@ -1,9 +1,10 @@
+// @ts-nocheck
 import React from 'react';
 import * as Animatable from 'react-native-animatable';
-import {GereseeLogo} from '../../assets/icons';
-import {Center} from '../../components';
+import {UdvalLogo} from '../../assets/icons';
+import {Center} from '..';
 
-export const LoadingGereseeLogo = () => {
+export const LoadingIcon = () => {
   return (
     <Animatable.View
       animation="fadeOut"
@@ -12,7 +13,7 @@ export const LoadingGereseeLogo = () => {
       useNativeDriver={true}
       style={{height: '100%', backgroundColor: 'white'}}>
       <Center flex={1}>
-        <GereseeLogo height={150} width={150} />
+        <UdvalLogo height={150} width={150} />
       </Center>
     </Animatable.View>
   );

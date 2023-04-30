@@ -9,7 +9,7 @@ import {
   Stack,
   Categories,
 } from '../../components';
-import {LoadingGereseeLogo} from '../../components/animated';
+import {LoadingIcon} from '../../components/animated/loading-logo';
 import {useFirestoreCollection} from '../../firebase';
 import {Autocomplete} from '../../components/search';
 import {SafeAreaScreen} from '..';
@@ -27,7 +27,7 @@ export const HomeScreen = () => {
   } = token || {claims: {admin: false}};
 
   if (productsLoading) {
-    return <LoadingGereseeLogo />;
+    return <LoadingIcon />;
   }
   if (!_.size(products)) {
     return <NoProducts description={'Таны дэлгүүрт бараа байхгүй байна.'} />;

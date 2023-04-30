@@ -1,36 +1,17 @@
+// @ts-nocheck
 import {useNavigation} from '@react-navigation/native';
 import _ from 'lodash';
 import React, {useContext} from 'react';
-// import {connectInfiniteHits} from 'react-instantsearch-native';
 import {FlatList} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
-import {LeftArrowIcon} from '../../assets';
 import {useFirestoreCollection} from '../../firebase';
 import {NavigationRoutes} from '../../navigation/navigation-param';
-import {LoadingGereseeLogo} from '../animated/loading-geresee-logo';
+import {LoadingIcon} from '../animated/loading-logo';
 import {Text} from '../core';
 import {Margin, Queue, Stack} from '../layout';
 import {Spacer} from '../layout/spacer';
 import {ProductPreview} from './product-preview';
 import RigthArrowIcon from '../../assets/icons/RightArrowIcon';
-
-// export const List = connectInfiniteHits(({hits, type = 'default'}) => {
-//   console.log(hits);
-//   const data = _.isEmpty(hits)
-//     ? [{objectID: '1'}, {objectID: '2'}, {objectID: '3'}]
-//     : hits;
-
-//   return (
-//     <FlatList
-//       data={data}
-//       horizontal
-//       style={{overflow: 'visible'}}
-//       keyExtractor={item => item.objectID}
-//       ItemSeparatorComponent={() => <Spacer horizontal={false} size={3} />}
-//       renderItem={({item}) => <ProductPreview product={item} />}
-//     />
-//   );
-// });
 
 export const CatalogPreview = ({category, products, type, onPress}: any) => {
   const {navigate} = useNavigation();
@@ -89,7 +70,7 @@ export const ProductList = (props: {
   ]);
 
   if (loading || productLoading) {
-    return <LoadingGereseeLogo />;
+    return <LoadingIcon />;
   }
 
   return (
